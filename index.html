@@ -2,22 +2,13 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Final 1</title>
+  <title>CodePen - final2</title>
   <link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Login Page</title>
-   
-    <link rel="stylesheet" href="index.css" type="text/css" />
-    <script src="index.js"></script>
-  </head>
-  <body>
-    <div class="form">
+<div id="login_field" class="form">
       <label for="username">Username:</label>
       <input id="username" type="text" />
       <br /><br />
@@ -25,10 +16,25 @@
       <input id="password" type="password" />
       <br /><br />
       <input type="submit" onclick="login_user()" />
+			<br /><br />
     </div>
-    <br /><br />
-  </body>
-</html>
+		<div id="add_grade" style=”visibility: hidden”>
+			<p>Add Grade to List:</p>
+			<label for="name">Student Name:</label>
+      <input id="name" type="text" />
+      <br /><br />
+      <label for="value">Grade:</label>
+      <input id="value" type="text" />
+      <br /><br />
+			<input type="button" onclick="add_grade()" value="Submit New Grade" />
+			<input type="button" onclick="go_back()" value="Cancel" />
+		</div>
+		<div id="grade_view" style=”visibility: hidden”>
+			<p>Grade View:</p>
+			<p id="grade_list"></p>
+			<input type="button" onclick="toggle_page_view('grade_list')" value="Add Grade" />
+		</div>
+<script src="index.js"></script>
 <!-- partial -->
   <script  src="./script.js"></script>
 

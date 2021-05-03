@@ -1,3 +1,6 @@
+document.getElementById("add_grade").style.visibility = "hidden";
+document.getElementById("grade_view").style.visibility = "hidden";
+
 function login_user() 
 {
 	let username = document.getElementById("username").value;
@@ -5,7 +8,8 @@ function login_user()
 
 	if (username == "cool") {
 		if (password == "password") {
-			document.location.href = "https://000616342.codepen.website/grade_view.html";
+			document.getElementById("login_field").style.display = "none";
+			document.getElementById("grade_view").style.visibility = "visible";
 		} else {
 			alert("password is incorrect!");
 		}
@@ -23,8 +27,6 @@ function toggle_page_view(view) {
 		document.getElementById("add_grade").style.visibility = "hidden";
 	}
 }
-
-document.getElementById("add_grade").style.visibility = "hidden";
 
 function add_grade() {
 	let name = document.getElementById("name").value;
