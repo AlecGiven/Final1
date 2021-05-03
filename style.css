@@ -1,0 +1,13 @@
+body {
+  text-align: center;
+}
+
+.form {
+	text-align: center;
+	width: 60%;
+	margin: auto;
+}
+
+input[type=submit] {
+	text-align: center;
+}
